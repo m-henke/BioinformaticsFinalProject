@@ -9,20 +9,6 @@ def max_string(a, b):
     return b
 
 
-def fix(ans, w):
-    c = 0
-    prev = 0
-    for x in range(len(ans)):
-        for y in range(prev, len(w)):
-            if ans[x] == w[y]:
-                c += 1
-                prev = y + 1
-                break
-    if c == len(ans):
-        return False
-    return True
-
-
 # recursive function that calculates the lcs and returns it
 def lcs(v, w):
     global ans_map, visit_map
